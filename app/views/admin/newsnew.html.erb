@@ -1,3 +1,4 @@
+<% include_wysiwyg %>
 <%= render "menu" %><br />
 		Tytuł wiadomości:<br />
 		<% form_tag({:action => "newscreate"}) do %>
@@ -6,7 +7,7 @@
 		  </div>
 		  Treść:<br />
 		  <div class="field">
-		  <%= text_area "content", :content, :rows => 10 %>
+		  <%= text_area "content", :content, :rows => 10, :class => "mceEditor" %>
 		  </div>
 		  <div class="actions">
 		    <%= submit_tag "Akceptuj" %>

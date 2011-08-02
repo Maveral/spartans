@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+  uses_tiny_mce
   def newsindex
     @newses = Newspost.all(:order => "created_at DESC")
   end
