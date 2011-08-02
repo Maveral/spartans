@@ -1,7 +1,6 @@
 class GbpostsController < ApplicationController
   def index
     @gbposts = Gbpost.all
-    @gbpost = Gbpost.new
   end
   
   def create
