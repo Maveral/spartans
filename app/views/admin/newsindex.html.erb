@@ -1,2 +1,21 @@
-<h1>Admin#newsindex</h1>
-<p>Find me in app/views/admin/newsindex.html.erb</p>
+<%= render "menu" %><br />
+<% unless @newses.empty? %>
+<table>
+	<% @newses.each do |news| %>
+	<tr>
+		<td colspan=3><%= image_tag("/images/Extra/breakline_main.png") %></td>
+	</tr>
+	<tr>
+		<td><%= news.title.force_encoding("UTF-8") %></td>
+	</tr>
+	<tr>
+		<td><%= news.content.force_encoding("UTF-8") %></td>
+	<td>
+			<%= link_to "Usuń", :action => "newsdelete", :post => news %>
+	</td>
+	</tr>
+	<% end %>
+</table>
+<% else %>
+  <div class="notice">Nie znaleziono żadnych wpisów.</div>
+<% end %>

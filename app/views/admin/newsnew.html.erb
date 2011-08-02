@@ -1,2 +1,14 @@
-<h1>Admin#newsnew</h1>
-<p>Find me in app/views/admin/newsnew.html.erb</p>
+<%= render "menu" %><br />
+		Tytuł wiadomości:<br />
+		<% form_tag({:action => "newscreate"}) do %>
+		  <div class="field">
+		    <%= text_field "title", :title %>
+		  </div>
+		  Treść:<br />
+		  <div class="field">
+		  <%= text_area "content", :content, :rows => 10 %>
+		  </div>
+		  <div class="actions">
+		    <%= submit_tag "Akceptuj" %>
+		  </div>
+		<% end %>
