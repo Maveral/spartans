@@ -1,5 +1,6 @@
-<% include_wysiwyg %>
-<%= render "menu" %><br />
+<center>
+	<%= render "menu" %><br />
+<span style="font:18pt 'Times New Roman'; color: #5c3b1d;">Dodaj nowe wydarzenie</span><br /><br />
 		Tytuł wiadomości:<br />
 		<% form_tag({:action => "newscreate"}) do %>
 		  <div class="field">
@@ -13,3 +14,4 @@
 		    <%= submit_tag "Akceptuj" %>
 		  </div>
 		<% end %>
+</center>

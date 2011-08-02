@@ -1,16 +1,17 @@
 <%= render "menu" %><br />
+<center><span style="font:18pt 'Times New Roman'; color: #5c3b1d;">Lista wpisów w księdze gości</span></center><br /><br />
 <% unless @gbposts.empty? %>
 <table>
 	<% @gbposts.each do |gbpost| %>
 	<tr>
-		<td colspan=3><%= image_tag("/images/Extra/breakline_main.png") %></td>
-	</tr>
-	<tr>
-		<td><%= gbpost.nick.force_encoding("UTF-8") %> napisał(a):</td>
+		<td style="width: 30%;"><%= gbpost.nick.force_encoding("UTF-8") %> napisał(a):</td>
 		<td><%= gbpost.content.force_encoding("UTF-8") %></td>
 		<td>
 			<%= link_to "Usuń", :action => "gbdelete", :post => gbpost %>
 		</td>
+	</tr>
+	<tr>
+		<td colspan=3><%= image_tag("/images/Extra/breakline_main.png") %></td>
 	</tr>
 	<% end %>
 </table>

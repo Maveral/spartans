@@ -14,10 +14,16 @@ class AdminController < ApplicationController
   end
 
   def newsedit
-    @news = Newspost.find()
+    @news = Newspost.find(params[:id])
   end
 
   def newsupdate
+    @news = Newspost.find(params[:id])
+    if @news.update_attributes(:title => params[:title][:title], :content => params[:content][:content])
+      redirect_to :action => :newsindex
+    else
+      render :action => :newsedit
+    end
   end
 
   def newsdelete

@@ -25,7 +25,9 @@ Nick:<br />
 		<td><%= gbpost.nick.force_encoding("UTF-8") %> napisał(a):</td>
 	</tr>
 	<tr>
-		<td><%= simple_format(gbpost.content.force_encoding("UTF-8")) %></td>
+		<td><%= simple_format(gbpost.content.force_encoding("UTF-8")) %><br />
+			<%= gbpost.created_at.strftime("%d.%m.%Y %H:%M:%S") %>
+		</td>
 	</tr>
 	<% end %>
 </table>

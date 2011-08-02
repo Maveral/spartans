@@ -31,6 +31,8 @@ Spartans::Application.routes.draw do
   
   match 'gbposts/create', :to => 'gbposts#create'
   match 'admin/newscreate', :to => 'admin#newscreate'
+  match 'admin/newsedit/:id', :to => 'admin#newsedit'
+  match 'admin/newsupdate', :to => 'admin#newsupdate'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

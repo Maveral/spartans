@@ -1,18 +1,24 @@
 <%= render "menu" %><br />
+<center>
+<span style="font:18pt 'Times New Roman'; color: #5c3b1d;">Lista wydarzeń</span><br /><br /><br />
 <% unless @newses.empty? %>
 <table>
 	<% @newses.each do |news| %>
 	<tr>
-		<td colspan=3><%= image_tag("/images/Extra/breakline_main.png") %></td>
+		<td><h2><center><%= news.title.force_encoding("UTF-8") %></center></h2></td>
 	</tr>
 	<tr>
-		<td><%= news.title.force_encoding("UTF-8") %></td>
+		<td><%= raw(news.content.force_encoding("UTF-8")) %></td>
 	</tr>
 	<tr>
-		<td><%= news.content.force_encoding("UTF-8") %></td>
-	<td>
+		<td>
+			<br />
+			<%= link_to "Edytuj", :action => "newsedit", :id => news.id %>
 			<%= link_to "Usuń", :action => "newsdelete", :post => news %>
-	</td>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=3><%= image_tag("/images/Extra/breakline_main.png") %></td>
 	</tr>
 	<% end %>
 </table>
