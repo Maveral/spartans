@@ -1,6 +1,7 @@
 <center><span style="font:24pt 'Times New Roman'; color: #5c3b1d;">Księga gości</span><br /><br />
-Nick:<br />
-		<% form_tag({:action => "create"}) do %>
+	<a href="#" id="link">Wpisz się</a>
+		<% form_tag({:action => "create"}, :id => "more", :class => "form") do %>
+		  Nick:<br />
 		  <div class="field">
 		    <%= text_field "nick", :nick %>
 		  </div>

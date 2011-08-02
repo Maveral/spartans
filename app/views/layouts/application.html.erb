@@ -5,13 +5,29 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <script type="text/javascript" src="/javascripts/jquery-1.6.2.min.js"></script>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style type="text/css">
  a img{ border: 0;}
  p {font:14pt 'Times New Roman'; color: #5c3b1d;}
  li {font:14pt 'Times New Roman'; color: #5c3b1d;}
+ .form {display: none;}
  </style>
+ 
+ <script type="text/javascript">
+
+ $(document).ready(
+ function()
+ {
+ $("#link").click(
+ function()
+ {
+ $("#more").toggle();
+ }).toggle(function() { $(this).text('Schowaj formularz'); }, function() { $(this).text("Wpisz się"); });
+ });
+</script>
+ 
 </head>
 <center>
 <body style="background-color: #342214;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">

@@ -1,6 +1,6 @@
 class GbpostsController < ApplicationController
   def index
-    @gbposts = Gbpost.all
+    @gbposts = Gbpost.all(:order => "created_at DESC")
   end
   
   def create
