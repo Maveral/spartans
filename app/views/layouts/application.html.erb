@@ -1,16 +1,11 @@
 <html>
 <head>
-  <%= include_tiny_mce_if_needed %>
   <title>Kawiarnia Spartanska</title>
-  <%= csrf_meta_tag %>
-  <script type="text/javascript" src="/javascripts/jquery-1.6.2.min.js"></script>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style type="text/css">
  a img{ border: 0;}
  p {font:14pt 'Times New Roman'; color: #5c3b1d;}
  li {font:14pt 'Times New Roman'; color: #5c3b1d;}
- .form {display: none;}
  </style>
 </head>
 <center>
@@ -51,7 +46,7 @@
 	</tr>
 	<tr>
 		<td colspan="2">
-			<%= link_to image_tag("/images/Index_12.jpg", :width=>"67", :height=>"28", :alt=>""), :controller => "about", :action => "aboutus" %></td>
+			<a href="/about/aboutus"><img src="/images/Index_12.jpg" width="67" height="28" alt=""></a></td>
 	</tr>
 	<tr>
 		<td colspan="10">
@@ -122,7 +117,6 @@
 			<img src="/images/spacer.gif" width="115" height="1" alt=""></td>
 	</tr>
 </table>
-<%= debug(params) if Rails.env.development? %>
 </body>
 </center>
 </html>
