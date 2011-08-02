@@ -17,10 +17,10 @@ Nick:<br />
 <table>
 	<% @gbposts.each do |gbpost| %>
 	<tr>
-		<td>Nick:</td><td><%= gbpost.nick %></td>
+		<td>Nick:</td><td><%= gbpost.nick.force_encoding("UTF-8") %></td>
 	</tr>
 	<tr>
-		<td>Treść:</td><td><%= gbpost.content %></td>
+		<td>Treść:</td><td><%= gbpost.content.force_encoding("UTF-8") %></td>
 	</tr>
 	<% end %>
 </table>
