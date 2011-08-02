@@ -1,5 +1,35 @@
 Spartans::Application.routes.draw do
-  resources :users
+  get "admin/newsindex"
+
+  get "admin/newsnew"
+
+  get "admin/newsedit"
+
+  get "admin/newsupdate"
+
+  get "admin/newsdelete"
+
+  get "admin/gbindex"
+
+  get "admin/gbnew"
+
+  get "admin/gbedit"
+
+  get "admin/gbupdate"
+
+  get "admin/gbdelete"
+
+  get "gallery/index"
+
+  get "contact/index"
+
+  get "gbposts/index"
+
+  get "about/aboutus"
+
+  get "newsposts/index"
+  
+  match 'gbposts/create', :to => 'gbposts#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,14 +1,126 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Spartans</title>
+  <title>Kawiarnia Spartanska</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+<meta charset="UTF-8">
+<style type="text/css">
+ a img{ border: 0;}
+ p {font:14pt 'Times New Roman'; color: #5c3b1d;}
+ li {font:14pt 'Times New Roman'; color: #5c3b1d;}
+ </style>
 </head>
-<body>
-
-<%= yield %>
-
+<center>
+<body style="background-color: #342214;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (Spartanska.psd) -->
+<table id="Table_01" width="1024" height="1001" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="10">
+			<img src="/images/Index_01.jpg" width="1024" height="206" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="10">
+			<img src="/images/Index_02.jpg" width="1024" height="30" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="8">
+			<img src="/images/Index_03.jpg" width="824" height="1" alt=""></td>
+		<td colspan="2" rowspan="4">
+			<img src="/images/Index_04.jpg" width="200" height="31" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="3">
+			<img src="/images/Index_05.jpg" width="324" height="30" alt=""></td>
+		<td colspan="5">
+			<img src="/images/Index_06.jpg" width="405" height="1" alt=""></td>
+		<td rowspan="3">
+			<%= link_to image_tag("/images/Index_07.jpg", :width=>"95", :height=>"30", :alt=>""), :controller => "contact", :action => "index" %></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="/images/Index_08.jpg" width="67" height="1" alt=""></td>
+		<td rowspan="2">
+			<%= link_to image_tag("/images/Index_09.jpg", :width=>"131", :height=>"29", :alt=>""), :controller => "newsposts", :action => "index" %></td>
+		<td rowspan="2">
+			<%= link_to image_tag("/images/Index_10.jpg", :width=>"84", :height=>"29", :alt=>""), :controller => "gallery", :action => "index" %></td>
+		<td rowspan="2">
+			<%= link_to image_tag("/images/Index_11.jpg", :width=>"123", :height=>"29", :alt=>""), :controller => "gbposts", :action => "index" %></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<%= link_to image_tag("/images/Index_12.jpg", :width=>"67", :height=>"28", :alt=>""), :controller => "about", :action => "aboutus" %></td>
+	</tr>
+	<tr>
+		<td colspan="10">
+			<img src="/images/Index_13.jpg" width="1024" height="61" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="/images/Index_14.jpg" width="135" height="483" alt=""></td>
+		<td colspan="2" style="width:217px; height: 457px; background-image:url('/images/Index_15.jpg'); background-repeat:repeat-y; text-align: center; vertical-align: top;">
+		<img src="/images/Extra/BreakLine.gif" alt=""><br />
+		<span style="font:16px 'Times New Roman'; color: #f5e8cb;">
+		Czynne codziennie<br />
+		10:00 - 21:00
+		</span>
+		<img src="/images/Extra/BreakLine.gif" alt=""><br />
+		<span style="font:16px 'Times New Roman'; color: #f5e8cb;">
+		ul. Ściegiennego 11/8<br />
+		44-310 Radlin
+		</span>
+		<img src="/images/Extra/BreakLine.gif" alt=""><br />
+		<span style="font:22px 'Times New Roman'; color: #f5e8cb;">
+		tel. 791 703 134
+		</span>
+		<br /><br /><br />
+		<img src="/images/Extra/foto1.gif" alt=""><br /><br />
+		<img src="/images/Extra/foto2.gif" alt=""><br /><br />
+		</td>
+		<td colspan="6" rowspan="2" style="width:557px; height: 483px; background-image:url('/images/Index_16.jpg'); overflow-y: scroll;">
+		<div style="height:100%; padding: 0 10px 10px 10px; border:0; margin 0; overflow:auto;">
+			<%= yield %>
+ 		</div>
+		</td>
+		<td rowspan="2">
+			<img src="/images/Index_17.jpg" width="115" height="483" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="/images/Index_18.jpg" width="217" height="26" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="10">
+			<img src="/images/Index_19.gif" width="1024" height="57" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="10">
+			<img src="/images/Index_20.jpg" width="1024" height="132" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="/images/spacer.gif" width="135" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="189" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="28" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="39" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="131" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="84" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="123" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="95" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="85" height="1" alt=""></td>
+		<td>
+			<img src="/images/spacer.gif" width="115" height="1" alt=""></td>
+	</tr>
+</table>
+<%= debug(params) if Rails.env.development? %>
 </body>
+</center>
 </html>

@@ -1,0 +1,30 @@
+<center><span style="font:24pt 'Times New Roman'; color: #5c3b1d;">Księga gości</span><br /><br />
+Nick:<br />
+		<% form_tag({:action => "create"}) do %>
+		  <div class="field">
+		    <%= text_field "nick", :nick %>
+		  </div><br />
+		  Treść:<br />
+		  <div class="field">
+		  <%= text_area "content", :content %>
+		  </div>
+		  <div class="actions">
+		    <%= submit_tag "Akceptuj" %>
+		  </div>
+		<% end %>
+
+<% unless @gbposts.empty? %>
+<table>
+	<% @gbposts.each do |gbpost| %>
+	<tr>
+		<td>Nick</td><td><%= gbpost.nick %></td>
+	</tr>
+	<tr>
+		<td>Treść</td><td><%= gbpost.content %></td>
+	</tr>
+	<% end %>
+</table>
+<% else %>
+  <div class="notice">Nie znaleziono żadnych wpisów.</div>
+<% end %>
+</center>
