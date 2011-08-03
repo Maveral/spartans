@@ -1,0 +1,14 @@
+<center>
+	<%= render "menu" %><br />
+<span style="font:24pt 'Times New Roman'; color: #5c3b1d;">Edytuj wydarzenie specjalne</span><br /><br />
+		<% form_tag({:action => "eventupdate", :id => @event.id}) do %>
+		  Treść:<br />
+		  <div class="field">
+		  <%= text_area "content", :content, :value => @event.content, :rows => 10, :class => "mceEditor" %>
+		  </div>
+		  <div class="actions">
+		    <%= submit_tag "Edytuj" %>
+		  </div>
+		<% end %>
+</center>
+

@@ -3,7 +3,7 @@
 	<% @posts.each do |post| %>
 			<center>
 			<%= image_tag("/images/Extra/breakline_main.png") %>
-			<h3><%= post.title.force_encoding("UTF-8") %></h3>
+			<h2><%= post.title.force_encoding("UTF-8") %></h2>
 			</center>
 			<%= raw(post.content.force_encoding("UTF-8")) %><br />
 			<span style="font:12px 'Times New Roman';"><%= post.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
@@ -11,3 +11,20 @@
 <% else %>
   	<div class="notice">Brak wpisów.</div>
 <% end %>
+
+<% if !@event.nil? %>
+<div id="sponsorAdDiv" style="visibility:hidden">
+<table width="450px" height="350px" bgcolor="#00F000"><tr><td>
+<table width="445px" height="345px" bgcolor="#F0FFF0"><tr><td align="center" valign="middle">
+
+<!--*****EDIT THIS MESSAGE*****-->
+<A HREF="http://www.amazon.com/exec/obidos/redirect-home/wa0c?tag-id=wa0c&placement=home-btn-100x70.gif&site=amazon">
+<IMG SRC="http://www.associmg.com/assoc/us/home-btn-100x70.gif?tag-id=wa0c"></A>
+<%= raw(@event.content) %>
+
+<!--*****EDIT THE ABOVE MESSAGE*****-->
+</td></tr></table>
+<center>To okno zniknie za kilka sekund</center>
+</td></tr></table>
+<% end %>
+</div>

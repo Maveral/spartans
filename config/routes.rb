@@ -1,4 +1,5 @@
 Spartans::Application.routes.draw do
+  
   get "admin/newsindex"
 
   get "admin/newsnew"
@@ -8,6 +9,12 @@ Spartans::Application.routes.draw do
   get "admin/newsupdate"
 
   get "admin/newsdelete"
+  
+  get "admin/eventsindex"
+  
+  get "admin/newevent"
+  
+  get "admin/eventdelete"
 
   get "admin/gbindex"
 
@@ -33,6 +40,9 @@ Spartans::Application.routes.draw do
   match 'admin/newscreate', :to => 'admin#newscreate'
   match 'admin/newsedit/:id', :to => 'admin#newsedit'
   match 'admin/newsupdate', :to => 'admin#newsupdate'
+  match 'admin/eventcreate', :to => 'admin#eventcreate'
+  match 'admin/eventedit/:id', :to => 'admin#eventedit'
+  match 'admin/eventsupdate', :to => 'admin#eventupdate'
   
   root :to =>  "newsposts#index"
 
