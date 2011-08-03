@@ -1,6 +1,5 @@
 <%= render "menu" %><br />
-<center>
-<span style="font:18pt 'Times New Roman'; color: #5c3b1d;">Lista wydarzeń</span><br /><br /><br />
+<center><span style="font:18pt 'Times New Roman'; color: #5c3b1d;">Lista wydarzeń</span></center><br /><br /><br />
 <% unless @newses.empty? %>
 <table>
 	<% @newses.each do |news| %>
@@ -12,9 +11,11 @@
 	</tr>
 	<tr>
 		<td>
-			<br />
+			<div style="float: right;">
 			<%= link_to "Edytuj", :action => "newsedit", :id => news.id %>
-			<%= link_to "Usuń", :action => "newsdelete", :post => news %>
+			<%= link_to "Usuń", :action => "newsdelete", :post => news %> - 
+			<span style="font:12px 'Times New Roman';"><%= news.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
+			</div>
 		</td>
 	</tr>
 	<tr>
