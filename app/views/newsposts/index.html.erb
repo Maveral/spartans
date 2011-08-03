@@ -1,12 +1,1 @@
-<% unless @posts.empty? %>
-	<% @posts.each do |post| %>
-			<center>
-			<%= image_tag("/images/Extra/breakline_main.png") %>
-			<h2><%= post.title.force_encoding("UTF-8") %></h2>
-			</center>
-			<%= raw(post.content.force_encoding("UTF-8")) %><br />
-			<%= post.updated_at.strftime("%d.%m.%Y %H:%M:%S") %>
-	<% end %>
-<% else %>
-  	<div class="notice">Brak wpisów.</div>
-<% end %>
+Jedzenie lol
