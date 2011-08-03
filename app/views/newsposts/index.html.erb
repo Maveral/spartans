@@ -1,1 +1,13 @@
-Jedzenie lol
+<center><span style="font:24pt 'Times New Roman'; color: #5c3b1d;">Wydarzenia</span></center><br />
+<% unless @posts.empty? %>
+	<% @posts.each do |post| %>
+			<center>
+			<%= image_tag("/images/Extra/breakline_main.png") %>
+			<h3><%= post.title.force_encoding("UTF-8") %></h3>
+			</center>
+			<%= raw(post.content.force_encoding("UTF-8")) %><br />
+			<span style="font:12px 'Times New Roman';"><%= post.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
+	<% end %>
+<% else %>
+  	<div class="notice">Brak wpisów.</div>
+<% end %>

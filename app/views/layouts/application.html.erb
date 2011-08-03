@@ -4,16 +4,36 @@
 <head>
   <title>Kawiarnia Spartanska</title>
 <meta charset="UTF-8">
+<script type="text/javascript" src="/javascripts/jquery-1.6.2.min.js"></script>
+<%= include_tiny_mce_if_needed %>
+
 <style type="text/css">
+ a { text-decoration: none; font-size: 12px;}
+ a:hover {text-decoration: none; background-color: black; color: #FFFFFF;}
  a img{ border: 0;}
  p {font:14pt 'Times New Roman'; color: #5c3b1d;}
  li {font:14pt 'Times New Roman'; color: #5c3b1d;}
+ .form{display: none;}
+ body {font-size: 12px;}
  </style>
+ 
+ <script type="text/javascript">
+
+ $(document).ready(
+ function()
+ {
+ $("#link").click(
+ function()
+ {
+ $("#more").toggle();
+ }).toggle(function() { $(this).text('Ukryj formularz'); }, function() { $(this).text("Wpisz się"); });
+ });
+</script>
+ 
 </head>
-<center>
 <body style="background-color: #342214;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- ImageReady Slices (Spartanska.psd) -->
-<table id="Table_01" width="1024" height="1001" border="0" cellpadding="0" cellspacing="0">
+<table id="Table_01" width="1024" height="1001" align=center border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td colspan="10">
 			<img src="/images/Index_01.jpg" width="1024" height="206" alt=""></td>
@@ -120,5 +140,4 @@
 	</tr>
 </table>
 </body>
-</center>
 </html>
