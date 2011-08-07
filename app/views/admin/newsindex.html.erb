@@ -1,28 +1,17 @@
 <%= render "menu" %><br />
 <center><span style="font:18pt 'Times New Roman'; color: #5c3b1d;">Lista wydarzeń</span></center><br /><br /><br />
 <% unless @newses.empty? %>
-<table>
 	<% @newses.each do |news| %>
-	<tr>
-		<td><h2><center><%= news.title.force_encoding("UTF-8") %></center></h2></td>
-	</tr>
-	<tr>
-		<td><%= raw(news.content.force_encoding("UTF-8")) %></td>
-	</tr>
-	<tr>
-		<td>
-			<div style="float: right;">
+			<center>
+			<%= image_tag("/images/Extra/breakline_main.png") %>
+			</center>
+			<h2><%= news.title.force_encoding("UTF-8") %></h2>
+			<%= raw(news.content.force_encoding("UTF-8")) %>
+			<span style="font:12px 'Times New Roman'; float: right;">
 			<%= link_to "Edytuj", :action => "newsedit", :id => news.id %>
 			<%= link_to "Usuń", :action => "newsdelete", :post => news %> - 
-			<span style="font:12px 'Times New Roman';"><%= news.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td colspan=3><%= image_tag("/images/Extra/breakline_main.png") %></td>
-	</tr>
+			<%= news.updated_at.strftime("%d.%m.%Y %H:%M:%S") %></span><br />
 	<% end %>
-</table>
 <% else %>
   <div class="notice">Nie znaleziono żadnych wpisów.</div>
 <% end %>
