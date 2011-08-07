@@ -1,12 +1,12 @@
 <center><span style="font:24pt 'Times New Roman'; color: #5c3b1d;">Księga gości</span><br /><br />
 		<% form_tag({:action => "create"}) do %>
-		  Nick:<br />
+		  <span style="font:12px 'Georgia'; color: #5c3b1d;">Imię:</span><br />
 		  <div class="field">
-		    <%= text_field "nick", :nick %>
+		    <%= text_field "nick", :nick, :class => "boxbackground" %>
 		  </div>
-		  Treść:<br />
+		  <span style="font:12px 'Georgia'; color: #5c3b1d">Treść:</span><br />
 		  <div class="field">
-		  <%= text_area "content", :content, :rows => 10 %>
+		  <%= text_area "content", :content, :rows => 10, :class => "boxbackground" %>
 		  </div>
 		  <div class="actions">
 		    <%= submit_tag "Akceptuj" %>
@@ -19,15 +19,17 @@
 	<% @gbposts.each do |gbpost| %>
 	<tr>
 		<td>
+			<br />
 			<%= image_tag("/images/Extra/breakline_main.png") %>
+			<br />
 		</td>
 	</tr>
 	<tr>
-		<td><%= gbpost.nick.force_encoding("UTF-8") %> napisał(a):</td>
+		<td><h2 style="color: #462e18;"><%= gbpost.nick.force_encoding("UTF-8") %> napisał(a):</h2></td>
 	</tr>
 	<tr>
-		<td><%= simple_format(gbpost.content.force_encoding("UTF-8")) %><br />
-			<span style="font:12px 'Times New Roman';"><%= gbpost.created_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
+		<td><%= simple_format(gbpost.content.force_encoding("UTF-8")) %>
+			<span style="font:12px 'Times New Roman'; float: right;"><%= gbpost.created_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
 		</td>
 	</tr>
 	<% end %>
